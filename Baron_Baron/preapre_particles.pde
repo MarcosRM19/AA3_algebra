@@ -10,4 +10,9 @@ void particles()
     garra = new particula (shuriken, 0, -100, 0, 50);
     mazazo = new particula (shuriken, 0, -100, 0, 50);
   }
+  else if (currentCombat == 3)
+  {
+    garra = new particula (shuriken, 0, -100, 0, 50);
+    mazazo = new particula (shuriken, 0, -100, 0, 50);
+  }
 }

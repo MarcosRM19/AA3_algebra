@@ -1,6 +1,6 @@
 //import processing.video.*;
 
-PImage fiddle, zed, backGround, manuteBackGround, shuriken, cuervo, fears, fiddleW, manute, garras, bonk;
+PImage fiddle, zed, backGround, manuteBackGround, nocturneBackGround, shuriken, cuervo, fears, fiddleW, manute, garras, bonk, nocturne;
 PVector[] atacks;
 int m_width, m_height;
 int fear, silence, ultimate, recover;
@@ -36,6 +36,8 @@ void setup()
   fears = loadImage("fear.png");
   fiddleW = loadImage("fiddleW.png");
   manuteBackGround = loadImage("jonia.jpg");
+  nocturneBackGround = loadImage("jonia.jpg");
+  nocturne = loadImage("nocturne.png");
   manute = loadImage("manute.png");
   garras = loadImage("");
   bonk = loadImage("");
@@ -81,11 +83,11 @@ void setup()
 
 void draw()
 {
-  if (currentCombat != 2)
+  if (currentCombat != 2 && currentCombat != 3)
   {
     image(backGround, 0, -90);
   } 
-  else
+  else if(currentCombat == 2)
   {
     for (int i = 0; i<manuteBackGround.width; i++)
     {
@@ -101,6 +103,24 @@ void draw()
       }
     }
     image(manuteBackGround, 0, -90);
+  }
+  else if(currentCombat == 3)
+  {
+     for (int i = 0; i< nocturneBackGround.width; i++)
+    {
+      for (int j = 0; j< nocturneBackGround.height; j++)
+      {
+        color colorPixel =  nocturneBackGround.get(i, j);
+        float r = red(colorPixel);
+        float g = green(colorPixel);
+        float b = blue(colorPixel);
+        float promedio = 0.299*r + 0.587*g + 0.114*b;
+        color colorPixelNuevo = color(promedio, promedio, promedio);
+
+         nocturneBackGround.set(i, j, colorPixelNuevo);
+      }
+    }
+    image( nocturneBackGround, 0, -90);
   }
   combat();
 
