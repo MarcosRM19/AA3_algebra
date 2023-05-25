@@ -132,9 +132,30 @@ void fiddleCombat()
       combatScene = 2;
       maxTimer = 0;
       randomAtack = random(1, 3);
-       if (enemyHealth <= 0)
+      if (enemyHealth <= 0)
       {
         currentCombat++;
+
+        currentScene = 1;
+        switch(currentCombat)
+        {
+        case 1:
+          zedIsDead = true;
+          break;
+        case 2:
+          zedIsDead = true;
+          break;
+        case 3:
+          zedIsDead = true;
+        case 4:
+          zedIsDead = true;
+          break;
+        case 5:
+          zedIsDead = true;
+          break;
+        case 6:
+        }
+
         combatScene = 0;
         enemyHealth = maxHealth;
       }

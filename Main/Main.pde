@@ -11,10 +11,18 @@ float playerAlfa = 0.025;
 float triangleP1PosX, triangleP2PosX, triangleP3PosX;
 float triangleP1PosY, triangleP2PosY, triangleP3PosY;
 
+PImage backgroundRedBuffZone, miniFiddle, miniZed;
+
+float zedPosX = 600;
+float zedPosY = 500;
+
+boolean zedIsDead = false;
+
 void setup()
 {
   size(1200, 800, P3D);
   
+  setUpMainMapScene();
   SetUpCombatManager();
 }
 
@@ -28,6 +36,7 @@ void draw()
   {
     // Main Map scene
     MainMapScene();
+    CollisionManager();
   }
   else if(currentScene == 2)
   {
@@ -40,9 +49,16 @@ void draw()
   }
 }
 
+void setUpMainMapScene()
+{
+  backgroundRedBuffZone = loadImage("redBuffZone.jpg");
+  miniFiddle = loadImage("miniFiddle.png");
+  miniZed = loadImage("miniZed.png");
+}
+
 void MainMapScene()
 {
-  background(255);
+  image(backgroundRedBuffZone, 0, 0);
   
   playerPosX = playerPosX + playerAlfa * (newPlayerPosX - playerPosX);
   playerPosY = playerPosY + playerAlfa * (newPlayerPosY - playerPosY); 
@@ -50,8 +66,12 @@ void MainMapScene()
   fill(0, 255, 0);
   triangle(triangleP1PosX, triangleP1PosY, triangleP2PosX, triangleP2PosY, triangleP3PosX, triangleP3PosY);
   
-  fill(255, 0, 0);
-  ellipse(playerPosX, playerPosY, 50, 50);
+  image(miniFiddle, playerPosX, playerPosY);
+  
+  if(!zedIsDead)
+  {
+    image(miniZed, zedPosX, zedPosY); 
+  }
 }
 
 void mouseClicked(){
