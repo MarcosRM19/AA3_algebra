@@ -1,6 +1,6 @@
-//import processing.video.*;
+import processing.video.*;
 
-PImage fiddle, zed, backGround, manuteBackGround, nocturneBackGround, shuriken, cuervo, fears, fiddleW, manute, garras, bonk, nocturne;
+PImage fiddle, zed, backGround, manuteBackGround, nocturneBackGround, shuriken, cuervo, fears, fiddleW, manute, garras, bonk, nocturne, nocturneQ, nocturneE, Mivi,DaniYMarcos, oscar, malo, Mente, nombres, pixars;
 PVector[] atacks;
 int m_width, m_height;
 int fear, silence, ultimate, recover;
@@ -15,7 +15,7 @@ float maxHealth;
 float enemyHealth;
 boolean silenciate;
 float randomAtack;
-int currentCombat = 1;
+int currentCombat = 5;
 particula shurikens;
 particula shurikens1;
 particula shurikens2;
@@ -26,7 +26,14 @@ particula fiddleFear;
 particula fiddlew;
 particula garra;
 particula mazazo;
-//Movie movie;
+particula susto;
+particula stun;
+particula mivi;
+particula mente;
+particula mal;
+particula pixar;
+particula hoja;
+Movie movie;
 int counter = 0;
 
 void SetUpCombatManager()
@@ -39,8 +46,17 @@ void SetUpCombatManager()
   nocturneBackGround = loadImage("jonia.jpg");
   nocturne = loadImage("nocturne.png");
   manute = loadImage("manute.png");
-  garras = loadImage("");
-  bonk = loadImage("");
+  garras = loadImage("mazazo.png");
+  bonk = loadImage("mazita.png");
+  nocturneQ = loadImage("nocturneQ.png");
+  nocturneE = loadImage("stun.png");
+  DaniYMarcos = loadImage("DaniYMarcos.png");
+  Mivi = loadImage("mivi.png");
+  malo = loadImage("-1.png");
+  Mente = loadImage("cell.png");
+  oscar = loadImage("Oscar.png");
+  nombres = loadImage("nombress.PNG");
+  pixars = loadImage("pixar.png");
   background(48, 111, 38);
   maxFear = 15;
   maxSilence = 10;

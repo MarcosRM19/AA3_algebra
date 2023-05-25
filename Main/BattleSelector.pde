@@ -24,8 +24,8 @@ void combat()
   case 6:
     if (counter <= 0)
     {
-      //movie = new Movie(this, "baron.mov");
-      // movie.loop();
+      movie = new Movie(this, "baron.mov");
+       movie.loop();
       counter++;
     }
     baron_baron();

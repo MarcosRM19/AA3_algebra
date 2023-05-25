@@ -131,7 +131,13 @@ void fiddleCombat()
     {
       combatScene = 2;
       maxTimer = 0;
-      randomAtack = random(1, 3);
+       if (currentCombat != 4)
+      {
+        randomAtack = random(1, 3);
+      } else
+      {
+        randomAtack = random(1, 4);
+      }
       if (enemyHealth <= 0)
       {
         currentCombat++;

@@ -82,26 +82,24 @@ void MainMapScene()
       imageMode(CENTER);
       image(miniZed, zedPosX, zedPosY);
     }
-    
+
     ellipse(triggerPosX, triggerPosY, 30, 30);
-  }
-  else if(currentZone == 2)
+  } else if (currentZone == 2)
   {
     imageMode(CORNER);
     image(midZone, 0, 0);
-    
+
     ellipse(trigger2PosX, trigger2PosY, 30, 30);
-    ellipse(trigger3PosX, trigger3PosY, 30, 30);    
-  }
-  else if(currentZone == 3)
+    ellipse(trigger3PosX, trigger3PosY, 30, 30);
+  } else if (currentZone == 3)
   {
     imageMode(CORNER);
     image(baronZone, 0, 0);
-    
+
     imageMode(CENTER);
     image(elmillor, 550, 150);
-    
-    ellipse(trigger4PosX, trigger4PosY, 30, 30);    
+
+    ellipse(trigger4PosX, trigger4PosY, 30, 30);
   }
 
   playerPosX = playerPosX + playerAlfa * (newPlayerPosX - playerPosX);
@@ -109,21 +107,24 @@ void MainMapScene()
 
   fill(0, 255, 0);
   triangle(triangleP1PosX, triangleP1PosY, triangleP2PosX, triangleP2PosY, triangleP3PosX, triangleP3PosY);
-  
+
   imageMode(CENTER);
   image(miniFiddle, playerPosX, playerPosY);
 }
 
 void mouseClicked() {
-  newPlayerPosX = mouseX;
-  newPlayerPosY = mouseY;
+  if (currentScene == 1)
+  {
+    newPlayerPosX = mouseX;
+    newPlayerPosY = mouseY;
 
-  triangleP1PosX = mouseX;
-  triangleP1PosY = mouseY - 10;
+    triangleP1PosX = mouseX;
+    triangleP1PosY = mouseY - 10;
 
-  triangleP2PosX = mouseX - 10;
-  triangleP2PosY = mouseY + 10;
+    triangleP2PosX = mouseX - 10;
+    triangleP2PosY = mouseY + 10;
 
-  triangleP3PosX = mouseX + 10;
-  triangleP3PosY = mouseY + 10;
+    triangleP3PosX = mouseX + 10;
+    triangleP3PosY = mouseY + 10;
+  }
 }
