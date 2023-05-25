@@ -90,7 +90,14 @@ void draw()
   }
   else if(currentScene == 4)
   {
-    // DOBLE EXCAVADORA ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+     imageMode(CORNER);
+    if (counter2 <= 0)
+    {
+      excavadora2000 = new Movie(this, "excavadora.mov");
+      excavadora2000.loop();
+      counter2++;
+    }
+    excavadora();
   }
 }
 

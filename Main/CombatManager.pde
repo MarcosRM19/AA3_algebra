@@ -34,7 +34,9 @@ particula mal;
 particula pixar;
 particula hoja;
 Movie movie;
+Movie excavadora2000;
 int counter = 0;
+int counter2 = 0;
 
 void SetUpCombatManager()
 {

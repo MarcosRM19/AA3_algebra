@@ -151,6 +151,7 @@ void fiddleCombat()
           break;
         case 3:
           nocturneIsDead = true;
+          break;
         case 4:
           marcosDaniDead = true;
           break;
