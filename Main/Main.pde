@@ -11,12 +11,31 @@ float playerAlfa = 0.015;
 float triangleP1PosX, triangleP2PosX, triangleP3PosX;
 float triangleP1PosY, triangleP2PosY, triangleP3PosY;
 
-PImage backgroundRedBuffZone, midZone, baronZone, miniFiddle, miniZed, elmillor;
+PImage backgroundRedBuffZone, midZone, baronZone, miniFiddle, miniZed, miniManute, miniNocturne, miniMarcosDani, elmillor;
 
 float zedPosX = 800;
 float zedPosY = 500;
 
+float manutePosX = 600;
+float manutePosY = 200;
+
+float nocturnePosX = 600;
+float nocturnePosY = 400;
+
+float marcosDaniPosX = 500;
+float marcosDaniPosY = 500;
+
+float oscarPosX = 300;
+float oscarPosY = 300;
+
+float elmillorPosX = 550;
+float elmillorPosY = 150;
+
 boolean zedIsDead = false;
+boolean manuteIsDead = false;
+boolean nocturneIsDead = false;
+boolean marcosDaniDead = false;
+boolean oscarIsDead = false;
 
 float triggerPosX = 300;
 float triggerPosY = 50;
@@ -45,18 +64,33 @@ void draw()
   if (currentScene == 0)
   {
     // Start Screen
-  } else if (currentScene == 1)
+  } 
+  else if (currentScene == 1)
   {
     // Main Map scene
     MainMapScene();
     CollisionManager();
-  } else if (currentScene == 2)
+  } 
+  else if (currentScene == 2)
   {
     // Combat scene
     CombatManager();
-  } else if (currentScene == 3)
+  } 
+  else if (currentScene == 3)
   {
-    // Win - Lose Screen
+    // Lose Screen
+    imageMode(CORNER);
+    if (counter <= 0)
+    {
+      movie = new Movie(this, "baron.mov");
+      movie.loop();
+      counter++;
+    }
+    baron_baron();
+  }
+  else if(currentScene == 4)
+  {
+    // DOBLE EXCAVADORA ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   }
 }
 
@@ -64,7 +98,10 @@ void setUpMainMapScene()
 {
   backgroundRedBuffZone = loadImage("redBuffZone.jpg");
   miniFiddle = loadImage("miniFiddle.png");
+  miniManute = loadImage("miniManute.png");
   miniZed = loadImage("miniZed.png");
+  miniNocturne = loadImage("miniNocturne.png");
+  miniMarcosDani = loadImage("miniMarcosDani.png");
   midZone = loadImage("midZone.jpg");
   baronZone = loadImage("baronZone.jpg");
   elmillor = loadImage("elmillor.png");
@@ -82,22 +119,48 @@ void MainMapScene()
       imageMode(CENTER);
       image(miniZed, zedPosX, zedPosY);
     }
+    
+    if (!manuteIsDead)
+    {
+      imageMode(CENTER);
+      image(miniManute, manutePosX, manutePosY);
+    }
 
     ellipse(triggerPosX, triggerPosY, 30, 30);
-  } else if (currentZone == 2)
+  } 
+  else if (currentZone == 2)
   {
     imageMode(CORNER);
     image(midZone, 0, 0);
+    
+    if (!nocturneIsDead)
+    {
+      imageMode(CENTER);
+      image(miniNocturne, nocturnePosX, nocturnePosY);
+    }
 
     ellipse(trigger2PosX, trigger2PosY, 30, 30);
     ellipse(trigger3PosX, trigger3PosY, 30, 30);
-  } else if (currentZone == 3)
+  } 
+  else if (currentZone == 3)
   {
     imageMode(CORNER);
     image(baronZone, 0, 0);
+    
+    if (!marcosDaniDead)
+    {
+      imageMode(CENTER);
+      image(miniMarcosDani, marcosDaniPosX, marcosDaniPosY);
+    }
+    
+    if (!oscarIsDead)
+    {
+      imageMode(CENTER);
+      image(oscar, oscarPosX, oscarPosY);
+    }
 
     imageMode(CENTER);
-    image(elmillor, 550, 150);
+    image(elmillor, elmillorPosX, elmillorPosY);
 
     ellipse(trigger4PosX, trigger4PosY, 30, 30);
   }

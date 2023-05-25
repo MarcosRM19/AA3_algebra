@@ -80,7 +80,7 @@ void combatZed()
       textToPrint = 0;
       if (fiddleHealth <= 0)
       {
-        currentCombat = 6;
+        currentScene = 3;
       }
     }
     timer++;

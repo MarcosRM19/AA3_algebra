@@ -52,13 +52,13 @@ void combatNocturne()
     case 1:
       text("Nocturne uso Abrazo de la Muerte", 400, 700);
 
-      garra.calcula_p();
-      garra.pinta_p();
+      susto.calcula_p();
+      susto.pinta_p();
       break;
     case 2:
       text("Nocturne uso Aniquilación", 450, 700);
-      mazazo.calcula_p();
-      mazazo.pinta_p();
+      stun.calcula_p();
+      stun.pinta_p();
       break;
     case 3:
       text("Nocturne esta silenciado", 450, 700);
@@ -77,7 +77,7 @@ void combatNocturne()
       textToPrint = 0;
       if (fiddleHealth <= 0)
       {
-        currentCombat = 6;
+        currentScene = 3;
       }
     }
     timer++;

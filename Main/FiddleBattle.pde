@@ -140,8 +140,6 @@ void fiddleCombat()
       }
       if (enemyHealth <= 0)
       {
-        currentCombat++;
-
         currentScene = 1;
         switch(currentCombat)
         {
@@ -149,15 +147,15 @@ void fiddleCombat()
           zedIsDead = true;
           break;
         case 2:
-          zedIsDead = true;
+          manuteIsDead = true;
           break;
         case 3:
-          zedIsDead = true;
+          nocturneIsDead = true;
         case 4:
-          zedIsDead = true;
+          marcosDaniDead = true;
           break;
         case 5:
-          zedIsDead = true;
+          oscarIsDead = true;
           break;
         case 6:
         }

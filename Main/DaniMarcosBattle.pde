@@ -1,8 +1,8 @@
 void dani_marcos()
 {
-   fiddleCombat();
+  fiddleCombat();
    
-   pushMatrix();
+  pushMatrix();
   translate(width/4, height/2, 50);
   pushMatrix();
   translate(450, -300, 0);
@@ -88,7 +88,7 @@ void dani_marcos()
       textToPrint = 0;
       if (fiddleHealth <= 0)
       {
-        currentCombat = 6;
+        currentScene = 3;
       }
     }
     timer++;
