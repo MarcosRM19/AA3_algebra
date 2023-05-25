@@ -29,7 +29,7 @@ particula mazazo;
 //Movie movie;
 int counter = 0;
 
-void setup()
+void SetUpCombatManager()
 {
   backGround = loadImage("jonia.jpg");
   shuriken = loadImage("shuriken.png");
@@ -41,7 +41,6 @@ void setup()
   manute = loadImage("manute.png");
   garras = loadImage("");
   bonk = loadImage("");
-  size(1200, 800, P3D);
   background(48, 111, 38);
   maxFear = 15;
   maxSilence = 10;
@@ -81,7 +80,7 @@ void setup()
   }
 }
 
-void draw()
+void CombatManager()
 {
   if (currentCombat != 2 && currentCombat != 3)
   {
@@ -122,6 +121,7 @@ void draw()
     }
     image( nocturneBackGround, 0, -90);
   }
+  
   combat();
 
   if (enemyHealth <= 0)
