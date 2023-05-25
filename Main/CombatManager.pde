@@ -15,7 +15,7 @@ float maxHealth;
 float enemyHealth;
 boolean silenciate;
 float randomAtack;
-int currentCombat = 5;
+int currentCombat = 4;
 particula shurikens;
 particula shurikens1;
 particula shurikens2;
