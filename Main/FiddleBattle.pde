@@ -185,7 +185,7 @@ void mousePressed()
       if ((punto_max_1.x>mouseX)&&
         (punto_max_1.y>mouseY)&&
         (mouseX>punto_min_1.x)&&
-        (mouseY>punto_min_1.y))
+        (mouseY>punto_min_1.y) && currentScene == 2)
       {
         if (i == 0 && fear >0)
         {
