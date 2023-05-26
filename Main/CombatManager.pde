@@ -1,4 +1,5 @@
 import processing.video.*;
+import processing.sound.*;
 
 PImage fiddle, zed, backGround, manuteBackGround, nocturneBackGround, shuriken, cuervo, fears, fiddleW, manute, garras, bonk, nocturne, nocturneQ, nocturneE, Mivi,DaniYMarcos, oscar, malo, Mente, nombres, pixars;
 PVector[] atacks;
@@ -35,6 +36,13 @@ particula pixar;
 particula hoja;
 Movie movie;
 Movie excavadora2000;
+SoundFile darkness;
+SoundFile blade; //https://www.youtube.com/watch?v=Uh-Ba1vhw1Q
+SoundFile MatchUp;
+SoundFile DaleMente;
+SoundFile MiviMivi;
+SoundFile Brasil; //https://www.youtube.com/shorts/Gq4P5sIDdIE
+SoundFile fiddleJinx; //https://www.youtube.com/watch?v=lETsFzGqVfg
 int counter = 0;
 int counter2 = 0;
 
@@ -59,6 +67,7 @@ void SetUpCombatManager()
   oscar = loadImage("Oscar.png");
   nombres = loadImage("nombress.PNG");
   pixars = loadImage("pixar.png");
+  darkness = new SoundFile(this, "darkness.mp3");
   background(48, 111, 38);
   maxFear = 15;
   maxSilence = 10;

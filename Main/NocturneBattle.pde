@@ -33,11 +33,13 @@ void combatNocturne()
 
     if (randomAtack <= 2 && randomAtack >= 1 && silenciate == false)
     {
+      darkness.play();
       fiddleHealth -= ((maxHealth / 10) * 2);
       textToPrint = 1;
       randomAtack = 0;
     } else if (randomAtack <= 3 && randomAtack >= 2 && silenciate == false)
     {
+      darkness.play();
       fiddleHealth -= ((maxHealth / 10) * 5);
       textToPrint = 2;
       randomAtack = 0;
@@ -51,7 +53,6 @@ void combatNocturne()
     {
     case 1:
       text("Nocturne uso Abrazo de la Muerte", 400, 700);
-
       susto.calcula_p();
       susto.pinta_p();
       break;
@@ -75,6 +76,7 @@ void combatNocturne()
       combatScene = 0;
       maxTimer = 0;
       textToPrint = 0;
+      darkness.stop();
       if (fiddleHealth <= 0)
       {
         currentScene = 3;
