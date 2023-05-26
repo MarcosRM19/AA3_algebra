@@ -11,7 +11,7 @@ float playerAlfa = 0.015;
 float triangleP1PosX, triangleP2PosX, triangleP3PosX;
 float triangleP1PosY, triangleP2PosY, triangleP3PosY;
 
-PImage backgroundRedBuffZone, midZone, baronZone, miniFiddle, miniZed, miniManute, miniNocturne, miniMarcosDani, elmillor;
+PImage backgroundRedBuffZone, midZone, baronZone, miniFiddle, miniZed, miniManute, miniNocturne, miniMarcosDani, elmillor, miniOscar;
 
 float zedPosX = 800;
 float zedPosY = 500;
@@ -112,6 +112,7 @@ void setUpMainMapScene()
   midZone = loadImage("midZone.jpg");
   baronZone = loadImage("baronZone.jpg");
   elmillor = loadImage("elmillor.png");
+  miniOscar = loadImage("oscar2.png");
 }
 
 void MainMapScene()
@@ -163,7 +164,7 @@ void MainMapScene()
     if (!oscarIsDead)
     {
       imageMode(CENTER);
-      image(oscar, oscarPosX, oscarPosY);
+      image(miniOscar, oscarPosX, oscarPosY);
     }
 
     imageMode(CENTER);
