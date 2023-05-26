@@ -131,7 +131,7 @@ void fiddleCombat()
     {
       combatScene = 2;
       maxTimer = 0;
-       if (currentCombat != 4)
+      if (currentCombat != 4)
       {
         randomAtack = random(1, 3);
       } else
@@ -196,18 +196,21 @@ void mousePressed()
         {
           moveAtack = 1;
           cuervos = new particula(cuervo, 0, 250, 150, -50);
+          combatScene = 1;
           fear--;
         }
         if (i == 1 && recover > 0)
         {
           moveAtack = 2;
           fiddlew = new particula(fiddleW, width-400, height-500, 0, -50);
+          combatScene = 1;
           recover--;
         }
         if ( i == 2 && silence > 0)
         {
           moveAtack = 3;
           fiddleFear = new particula(fears, 0, 250, 150, -50);
+          combatScene = 1;
           silence--;
         }
         if ( i == 3 && ultimate > 0)
@@ -215,9 +218,9 @@ void mousePressed()
           moveAtack = 4;
           cuervos1 = new particula(cuervo, 0, 350, 150, -50);
           cuervos2 = new particula(cuervo, 0, 150, 150, -50);
+          combatScene = 1;
           ultimate--;
         }
-        combatScene = 1;
       }
     }
   }
