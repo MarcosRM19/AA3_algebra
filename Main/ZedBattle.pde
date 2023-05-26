@@ -35,11 +35,13 @@ void combatZed()
 
     if (randomAtack <= 2 && randomAtack >= 1 && silenciate == false)
     {
+      blade.play();
       fiddleHealth -= ((maxHealth / 10) * 3);
       textToPrint = 1;
       randomAtack = 0;
     } else if (randomAtack <= 3 && randomAtack >= 2 && silenciate == false)
     {
+      blade.play();
       fiddleHealth -= ((maxHealth / 10) * 5);
       textToPrint = 2;
       randomAtack = 0;
@@ -73,11 +75,12 @@ void combatZed()
       maxTimer++;
       timer = 0;
     }
-    if (maxTimer >= changeTime)
+    if (maxTimer-1.5 >= changeTime)
     {
       combatScene = 0;
       maxTimer = 0;
       textToPrint = 0;
+      blade.stop();
       if (fiddleHealth <= 0)
       {
         currentScene = 3;

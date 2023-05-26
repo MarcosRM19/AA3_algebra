@@ -35,6 +35,7 @@ void dani_marcos()
 
     if (randomAtack < 2 && randomAtack >= 1 && silenciate == false)
     {
+      DaleMente.play();
       fiddleHealth -= ((maxHealth / 10) * 1);
       textToPrint = 1;
       randomAtack = 0;
@@ -86,6 +87,7 @@ void dani_marcos()
       combatScene = 0;
       maxTimer = 0;
       textToPrint = 0;
+      DaleMente.stop();
       if (fiddleHealth <= 0)
       {
         currentScene = 3;

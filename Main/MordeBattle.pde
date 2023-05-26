@@ -35,11 +35,13 @@ void combatMorde()
 
     if (randomAtack <= 2 && randomAtack >= 1 && silenciate == false)
     {
+      Brasil.play();
       fiddleHealth -= ((maxHealth / 10) * 1);
       textToPrint = 1;
       randomAtack = 0;
     } else if (randomAtack <= 3 && randomAtack >= 2 && silenciate == false)
     {
+      Brasil.play();
       fiddleHealth -= ((maxHealth / 10) * 6);
       textToPrint = 2;
       randomAtack = 0;
@@ -77,6 +79,7 @@ void combatMorde()
       combatScene = 0;
       maxTimer = 0;
       textToPrint = 0;
+      Brasil.stop();
       if (fiddleHealth <= 0)
       {
         currentScene = 3;

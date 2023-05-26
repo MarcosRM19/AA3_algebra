@@ -37,12 +37,12 @@ particula hoja;
 Movie movie;
 Movie excavadora2000;
 SoundFile darkness;
-SoundFile blade; //https://www.youtube.com/watch?v=Uh-Ba1vhw1Q
+SoundFile blade; 
 SoundFile MatchUp;
 SoundFile DaleMente;
 SoundFile MiviMivi;
-SoundFile Brasil; //https://www.youtube.com/shorts/Gq4P5sIDdIE
-SoundFile fiddleJinx; //https://www.youtube.com/watch?v=lETsFzGqVfg
+SoundFile Brasil; 
+SoundFile fiddleJinx; 
 int counter = 0;
 int counter2 = 0;
 
@@ -68,6 +68,10 @@ void SetUpCombatManager()
   nombres = loadImage("nombress.PNG");
   pixars = loadImage("pixar.png");
   darkness = new SoundFile(this, "darkness.mp3");
+  blade = new SoundFile(this, "zed.mp3");
+  Brasil = new SoundFile(this, "brasil.mp3");
+  fiddleJinx = new SoundFile(this, "fiddle.mp3");
+  DaleMente  = new SoundFile(this, "daleMente.mp3");
   background(48, 111, 38);
   maxFear = 15;
   maxSilence = 10;

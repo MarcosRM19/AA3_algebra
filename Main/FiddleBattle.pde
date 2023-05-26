@@ -70,12 +70,14 @@ void fiddleCombat()
     switch(moveAtack)
     {
     case 1:
+      fiddleJinx.play();
       enemyHealth -= ((maxHealth / 10) * 3);
       moveAtack = 0;
       textToPrint = 1;
       break;
 
     case 2:
+      fiddleJinx.play();
       enemyHealth -= ((maxHealth / 10) * 2);
       fiddleHealth += ((maxHealth / 10) * 2);
       moveAtack = 0;
@@ -83,6 +85,7 @@ void fiddleCombat()
       break;
 
     case 3:
+      fiddleJinx.play();  
       silenciate = true;
       enemyHealth -= ((maxHealth / 10) * 1);
       moveAtack = 0;
@@ -90,6 +93,7 @@ void fiddleCombat()
       break;
 
     case 4:
+      fiddleJinx.play();
       enemyHealth -= ((maxHealth / 10) * 6);
       moveAtack = 0;
       textToPrint = 4;
@@ -131,6 +135,7 @@ void fiddleCombat()
     {
       combatScene = 2;
       maxTimer = 0;
+      fiddleJinx.stop();
       if (currentCombat != 4)
       {
         randomAtack = random(1, 3);
