@@ -72,6 +72,8 @@ void SetUpCombatManager()
   Brasil = new SoundFile(this, "brasil.mp3");
   fiddleJinx = new SoundFile(this, "fiddle.mp3");
   DaleMente  = new SoundFile(this, "daleMente.mp3");
+  MiviMivi = new SoundFile(this, "mivi.mp3");
+  MatchUp = new SoundFile(this, "-1.mp3");
   background(48, 111, 38);
   maxFear = 15;
   maxSilence = 10;

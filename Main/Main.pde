@@ -51,12 +51,16 @@ float trigger4PosY = 700;
 
 float currentZone = 1;
 
+bezier_Curve curve, curve2, curve3;
+interpolation_Curve Icurve;
+
 void setup()
 {
   size(1200, 800, P3D);
 
   setUpMainMapScene();
   SetUpCombatManager();
+  setUpCurves();
 }
 
 void draw()
@@ -123,6 +127,8 @@ void MainMapScene()
   {
     imageMode(CORNER);
     image(backgroundRedBuffZone, 0, 0);
+    
+    Icurve.pinta_curva();
 
     if (!zedIsDead)
     {
@@ -142,6 +148,9 @@ void MainMapScene()
   {
     imageMode(CORNER);
     image(midZone, 0, 0);
+    curve.pintar_curva();
+    curve2.pintar_curva();
+    curve3.pintar_curva();
     
     if (!nocturneIsDead)
     {

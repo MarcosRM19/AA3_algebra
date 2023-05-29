@@ -41,11 +41,13 @@ void dani_marcos()
       randomAtack = 0;
     } else if (randomAtack < 3 && randomAtack >= 2 && silenciate == false)
     {
+      MatchUp.play();
       fiddleHealth -= ((maxHealth / 10) * 3);
       textToPrint = 2;
       randomAtack = 0;
     } else if (randomAtack <= 4 && randomAtack >= 3 && silenciate == false)
     {
+      MiviMivi.play();
       fiddleHealth -= ((maxHealth / 10) * 5);
       textToPrint = 3;
       randomAtack = 0;
@@ -73,7 +75,7 @@ void dani_marcos()
       mivi.pinta_p();
       break;
     case 4:
-      text("Dani y Marcos esta silenciado", 450, 700);
+      text("Dani y Marcos esta silenciado", 400, 700);
       break;
     }
 
@@ -88,6 +90,8 @@ void dani_marcos()
       maxTimer = 0;
       textToPrint = 0;
       DaleMente.stop();
+      MatchUp.stop();
+      MiviMivi.stop();
       if (fiddleHealth <= 0)
       {
         currentScene = 3;
