@@ -52,7 +52,7 @@ float trigger4PosY = 700;
 float currentZone = 1;
 
 bezier_Curve curve, curve2, curve3;
-interpolation_Curve Icurve;
+interpolation_Curve Icurve, Icurve2, Icurve3, Icurve4;
 
 void setup()
 {
@@ -129,6 +129,7 @@ void MainMapScene()
     image(backgroundRedBuffZone, 0, 0);
     
     Icurve.pinta_curva();
+    Icurve2.pinta_curva();
 
     if (!zedIsDead)
     {
@@ -165,6 +166,9 @@ void MainMapScene()
   {
     imageMode(CORNER);
     image(baronZone, 0, 0);
+    
+    Icurve3.pinta_curva();
+    Icurve4.pinta_curva();
     
     if (!marcosDaniDead)
     {
