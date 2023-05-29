@@ -113,6 +113,8 @@ void setUpMainMapScene()
   baronZone = loadImage("baronZone.jpg");
   elmillor = loadImage("elmillor.png");
   miniOscar = loadImage("oscar2.png");
+  
+  InitializeObstacles();
 }
 
 void MainMapScene()
@@ -172,6 +174,9 @@ void MainMapScene()
 
     ellipse(trigger4PosX, trigger4PosY, 30, 30);
   }
+  
+  UpdateObstacles();
+  MovePlayerBackwards();
 
   playerPosX = playerPosX + playerAlfa * (newPlayerPosX - playerPosX);
   playerPosY = playerPosY + playerAlfa * (newPlayerPosY - playerPosY);
