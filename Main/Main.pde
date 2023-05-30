@@ -61,6 +61,7 @@ void setup()
   setUpMainMapScene();
   SetUpCombatManager();
   setUpCurves();
+  SetUpCurvesCalcules();
 }
 
 void draw()
@@ -127,9 +128,8 @@ void MainMapScene()
   {
     imageMode(CORNER);
     image(backgroundRedBuffZone, 0, 0);
-    
-    Icurve.pinta_curva();
-    Icurve2.pinta_curva();
+
+    CalcularManute();
 
     if (!zedIsDead)
     {
@@ -137,11 +137,7 @@ void MainMapScene()
       image(miniZed, zedPosX, zedPosY);
     }
     
-    if (!manuteIsDead)
-    {
-      imageMode(CENTER);
-      image(miniManute, manutePosX, manutePosY);
-    }
+    
 
     ellipse(triggerPosX, triggerPosY, 30, 30);
   } 
@@ -149,15 +145,8 @@ void MainMapScene()
   {
     imageMode(CORNER);
     image(midZone, 0, 0);
-    curve.pintar_curva();
-    curve2.pintar_curva();
-    curve3.pintar_curva();
+    CalcularNocturne();
     
-    if (!nocturneIsDead)
-    {
-      imageMode(CENTER);
-      image(miniNocturne, nocturnePosX, nocturnePosY);
-    }
 
     ellipse(trigger2PosX, trigger2PosY, 30, 30);
     ellipse(trigger3PosX, trigger3PosY, 30, 30);
@@ -166,15 +155,7 @@ void MainMapScene()
   {
     imageMode(CORNER);
     image(baronZone, 0, 0);
-    
-    Icurve3.pinta_curva();
-    Icurve4.pinta_curva();
-    
-    if (!marcosDaniDead)
-    {
-      imageMode(CENTER);
-      image(miniMarcosDani, marcosDaniPosX, marcosDaniPosY);
-    }
+    CalcularMivi();
     
     if (!oscarIsDead)
     {
