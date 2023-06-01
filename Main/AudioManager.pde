@@ -9,3 +9,9 @@ void excavadora()
   excavadora2000.read();
   image(excavadora2000,0,0,width,height);
 }
+
+void TopEnemigo()
+{
+  topEnemigo.read();
+  image(topEnemigo, 0,0,width,height);
+}

@@ -104,6 +104,17 @@ void draw()
     }
     excavadora();
   }
+  else if(currentScene == 5)
+  {
+     imageMode(CORNER);
+    if (counter3 <= 0)
+    {
+      topEnemigo = new Movie(this, "topEnemigo.mov");
+      topEnemigo.loop();
+      counter3++;
+    }
+    TopEnemigo();
+  }  
 }
 
 void setUpMainMapScene()

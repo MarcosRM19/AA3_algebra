@@ -36,6 +36,7 @@ particula pixar;
 particula hoja;
 Movie movie;
 Movie excavadora2000;
+Movie topEnemigo;
 SoundFile darkness;
 SoundFile blade; 
 SoundFile MatchUp;
@@ -45,6 +46,7 @@ SoundFile Brasil;
 SoundFile fiddleJinx; 
 int counter = 0;
 int counter2 = 0;
+int counter3 = 0;
 
 void SetUpCombatManager()
 {

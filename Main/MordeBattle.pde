@@ -82,7 +82,7 @@ void combatMorde()
       Brasil.stop();
       if (fiddleHealth <= 0)
       {
-        currentScene = 3;
+        currentScene = 5;
       }
     }
     timer++;
