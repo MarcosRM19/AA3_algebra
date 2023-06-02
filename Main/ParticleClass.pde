@@ -1,4 +1,4 @@
-// Zona para la clase
+// Class of particles
 class particula {
   // Atributos
   PImage image;

@@ -1,3 +1,4 @@
+//Initialation of the particles
 void particles()
 {
   if (currentCombat == 1)

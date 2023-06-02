@@ -1,3 +1,4 @@
+// Initialize the differents videos in the game
 void baron_baron()
 {
   movie.read();

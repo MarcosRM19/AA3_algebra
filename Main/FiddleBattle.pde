@@ -1,3 +1,4 @@
+// The control of the player when is in combat
 void fiddleCombat()
 {
   pushMatrix();
@@ -177,6 +178,7 @@ void fiddleCombat()
   }
 }
 
+//Calcules of the collision to detect which attack want to do
 void mousePressed()
 {
   if (combatScene == 0)

@@ -1,6 +1,7 @@
 boolean active_c1, active_c2, active_c3, active_c4, active_c5, active_c6, active_c7; 
 float u; 
 
+// Calcules of the three diferents curves, 2 are interpolation and 1 is bezier
 void SetUpCurvesCalcules()
 {
    active_c2 = true;

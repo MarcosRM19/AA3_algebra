@@ -1,3 +1,4 @@
+//Mordekaiser Combat
 void combatMorde()
 {
   fiddleCombat();

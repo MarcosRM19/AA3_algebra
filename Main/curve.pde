@@ -1,3 +1,4 @@
+//classes of curves
 class  bezier_Curve {
   // ATRIBUTOS
   PVector[] puntos_control_curva;

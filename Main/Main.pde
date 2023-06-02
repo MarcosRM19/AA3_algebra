@@ -66,6 +66,7 @@ void setup()
 
 void draw()
 {
+  // Differents scenes in the gama
   if (currentScene == 0)
   {
     // Start Screen
@@ -133,6 +134,7 @@ void setUpMainMapScene()
   InitializeObstacles();
 }
 
+// The generetor of the three scenes where the player can move
 void MainMapScene()
 {
   if (currentZone == 1)
@@ -193,6 +195,7 @@ void MainMapScene()
   image(miniFiddle, playerPosX, playerPosY);
 }
 
+// Path Findins
 void mouseClicked() {
   if (currentScene == 1)
   {

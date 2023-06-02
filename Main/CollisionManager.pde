@@ -6,6 +6,7 @@ float vxObstaclesZone1, vxObstaclesZone2, vxObstaclesZone3;
 float vyObstaclesZone1, vyObstaclesZone2, vyObstaclesZone3;
 float moduleObstaclesZone1, moduleObstaclesZone2, moduleObstaclesZone3;
 
+//All the colision that there are in the move scene
 void CollisionManager()
 {
   // WIN CONDITION COLLISION

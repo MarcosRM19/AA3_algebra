@@ -1,3 +1,4 @@
+//Nocturne Combat
 void combatNocturne()
 {
   fiddleCombat();

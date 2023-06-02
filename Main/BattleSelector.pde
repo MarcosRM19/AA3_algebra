@@ -1,3 +1,4 @@
+//Set the player to a fight when touch a enemy
 void combat()
 {
   switch(currentCombat)

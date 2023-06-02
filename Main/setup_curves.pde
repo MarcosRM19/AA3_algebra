@@ -34,22 +34,22 @@ void setUpCurves()
   Ipc[0] = new PVector(400, 200);
   Ipc[1] = new PVector(420, 40);
   Ipc[2] = new PVector(520, 60);
-  Ipc[3] = new PVector(570, 100);
+  Ipc[3] = new PVector(670, 100);
 
-  Ipc2[0] = new PVector(570, 100);
-  Ipc2[1] = new PVector(550, 260);
-  Ipc2[2] = new PVector(470, 290);
+  Ipc2[0] = new PVector(670, 100);
+  Ipc2[1] = new PVector(750, 260);
+  Ipc2[2] = new PVector(670, 290);
   Ipc2[3] = new PVector(400, 200);
 
-  Ipc3[0] = new PVector(570, 700);
-  Ipc3[1] = new PVector(450, 780);
-  Ipc3[2] = new PVector(370, 790);
-  Ipc3[3] = new PVector(300, 700);
+  Ipc3[0] = new PVector(570, 600);
+  Ipc3[1] = new PVector(450, 680);
+  Ipc3[2] = new PVector(370, 690);
+  Ipc3[3] = new PVector(300, 600);
 
-  Ipc4[0] = new PVector(300, 700);
+  Ipc4[0] = new PVector(300, 600);
   Ipc4[1] = new PVector(370, 500);
   Ipc4[2] = new PVector(470, 550);
-  Ipc4[3] = new PVector(570, 700);
+  Ipc4[3] = new PVector(570, 600);
 
 
   curve = new bezier_Curve(pc, g, n);

@@ -114,7 +114,7 @@ void SetUpCombatManager()
     atacks[i] = new PVector(x, y);
   }
 }
-
+// 2 LUTS
 void CombatManager()
 {
   if (currentCombat != 2 && currentCombat != 3)

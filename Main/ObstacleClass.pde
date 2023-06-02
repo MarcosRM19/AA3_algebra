@@ -1,3 +1,4 @@
+//Class to create the obstacles
 int numObstacles = 10;
 obstacle[] obstaclesZone1 = new obstacle[numObstacles + 50];
 obstacle[] obstaclesZone2 = new obstacle[numObstacles + 50];
