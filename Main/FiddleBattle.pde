@@ -86,7 +86,7 @@ void fiddleCombat()
       break;
 
     case 3:
-      fiddleJinx.play();  
+      fiddleJinx.play();
       silenciate = true;
       enemyHealth -= ((maxHealth / 10) * 1);
       moveAtack = 0;
@@ -229,6 +229,15 @@ void mousePressed()
           ultimate--;
         }
       }
+    }
+  }
+
+  if (currentScene == 0)
+  {
+    if (mouseX < width / 2 + 200 && mouseX > width / 2 - 200 &&
+      mouseY < height / 2 + 280 && mouseY > height / 2 + 80)
+    {
+      currentScene = 1;
     }
   }
 }

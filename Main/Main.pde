@@ -1,4 +1,4 @@
-int currentScene = 1;
+int currentScene = 0;
 
 float newPlayerPosX = 200;
 float newPlayerPosY = 700;
@@ -11,7 +11,7 @@ float playerAlfa = 0.015;
 float triangleP1PosX, triangleP2PosX, triangleP3PosX;
 float triangleP1PosY, triangleP2PosY, triangleP3PosY;
 
-PImage backgroundRedBuffZone, midZone, baronZone, miniFiddle, miniZed, miniManute, miniNocturne, miniMarcosDani, elmillor, miniOscar;
+PImage backgroundRedBuffZone, midZone, baronZone, miniFiddle, miniZed, miniManute, miniNocturne, miniMarcosDani, elmillor, miniOscar, elmillorMenu;
 
 float zedPosX = 800;
 float zedPosY = 500;
@@ -70,6 +70,7 @@ void draw()
   if (currentScene == 0)
   {
     // Start Screen
+    MainMenuManager();
   } 
   else if (currentScene == 1)
   {
@@ -130,6 +131,7 @@ void setUpMainMapScene()
   baronZone = loadImage("baronZone.jpg");
   elmillor = loadImage("elmillor.png");
   miniOscar = loadImage("oscar2.png");
+  elmillorMenu = loadImage("elmillorMenu.jpg");
   
   InitializeObstacles();
 }
@@ -149,8 +151,6 @@ void MainMapScene()
       imageMode(CENTER);
       image(miniZed, zedPosX, zedPosY);
     }
-    
-    
 
     ellipse(triggerPosX, triggerPosY, 30, 30);
   } 
@@ -158,8 +158,7 @@ void MainMapScene()
   {
     imageMode(CORNER);
     image(midZone, 0, 0);
-    CalcularNocturne();
-    
+    CalcularNocturne();    
 
     ellipse(trigger2PosX, trigger2PosY, 30, 30);
     ellipse(trigger3PosX, trigger3PosY, 30, 30);
@@ -195,7 +194,7 @@ void MainMapScene()
   image(miniFiddle, playerPosX, playerPosY);
 }
 
-// Path Findins
+// Path Findings
 void mouseClicked() {
   if (currentScene == 1)
   {
@@ -211,4 +210,38 @@ void mouseClicked() {
     triangleP3PosX = mouseX + 10;
     triangleP3PosY = mouseY + 10;
   }
+}
+
+void MainMenuManager()
+{
+    imageMode(CORNER);
+    image(elmillorMenu, -325, 0);
+    
+    rectMode(CENTER);
+    fill(color(125));
+    rect(width / 2, 110, 850, 100);
+    
+    textMode(CENTER);
+    stroke(1);
+    textSize(30);
+    fill(0);
+    text("ELMILLOR NECESITA TU AYUDA! ", 400, 100);
+    text("LLEGA A BARON ANTES DE QUE SEA TARDE, O SUFRE SU FLAMEO!", 190, 140);
+    textMode(CORNER);
+    
+    pushMatrix();
+    translate(0, 0, 50);
+
+    fill(color(125));
+    stroke(1);
+    rectMode(CENTER);
+    rect(width / 2, height / 2 + 180, 200, 100);
+    rectMode(CORNER);
+    fill(color(0));
+    textSize(40);
+    textMode(CENTER);
+    text("JUGAR", width / 2 - 55, height / 2 + 190);
+    textMode(CORNER);
+
+    popMatrix();
 }
