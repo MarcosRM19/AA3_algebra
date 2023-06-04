@@ -43,8 +43,8 @@ float triggerPosY = 50;
 float trigger2PosX = 600;
 float trigger2PosY = 700;
 
-float trigger3PosX = 400;
-float trigger3PosY = 50;
+float trigger3PosX = 200;
+float trigger3PosY = 100;
 
 float trigger4PosX = 1100;
 float trigger4PosY = 700;

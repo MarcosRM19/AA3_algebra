@@ -151,7 +151,7 @@ void MovePlayerBackwards()
   if (movePlayer == true)
   {
     timeToMove--;
-    playerAlfa = -0.03;
+    playerAlfa = -0.01;
   }
   if (timeToMove <= 0)
   {

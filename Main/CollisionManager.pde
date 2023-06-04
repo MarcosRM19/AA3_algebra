@@ -99,7 +99,10 @@ void CollisionManager()
   if(moduleTrigger2 < 150 && currentZone == 2)
   {
     currentZone = 1;
-    playerPosY = 30;
+    playerPosY = 700;
+    playerPosX = 200;
+    newPlayerPosY = 700;
+    newPlayerPosX = 200;
   }
   
   // Collision with trigger to Zone 3
@@ -124,9 +127,9 @@ void CollisionManager()
   if(moduleTrigger4 < 150 && currentZone == 3)
   {
     currentZone = 2;
-    playerPosX = 1000;
+    playerPosX = 400;
     playerPosY = 50;
-    newPlayerPosX = 1000;
+    newPlayerPosX = 400;
     newPlayerPosY = 50;
   }
   
